@@ -1,0 +1,9 @@
+concept_float = float=input("definição de float")
+concept_int = int=input("definição de intereger")
+concept_str= str=input("definição de string")
+concept_bool=bool=input("definição de bool")
+
+print(f"|float:, {concept_float}")
+print(f"|intereger:, {concept_intereger}")
+print(f"|string:, {concept_string}")
+print(f"|bool:, {concept_bool}")
