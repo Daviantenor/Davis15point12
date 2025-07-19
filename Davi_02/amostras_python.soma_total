@@ -1,0 +1,6 @@
+numeros=3
+soma_total=0
+while numeros !=0:
+    numeros=int(input("digite varios numeros:"))
+    soma_total=(soma_total + numeros)
+print(soma_total)
