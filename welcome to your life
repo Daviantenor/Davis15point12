@@ -21,4 +21,4 @@ while opção != 5:
     
     
     else:
-        print(f".")
+        print(f"voçê poderá ver sua lista mais tarde.")
