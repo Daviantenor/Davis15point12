@@ -1,0 +1,22 @@
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://www.wikipedia.org/"
+response = requests.get(url)
+response.raise_for_status()
+
+soup = BeautifulSoup(response.text, "html.parser")
+
+# Primeiro tenta achar o <h1> principal da home
+h1 = soup.find("h1", {"class": "central-textlogo__image"})
+if h1:
+    print("Título da página inicial da Wikipedia:")
+    print(h1.get_text(strip=True))
+else:
+    # Se não encontrar, pega o <title> da aba do navegador
+    title = soup.find("title")
+    if title:
+        print("Título encontrado no <title>:")
+        print(title.get_text(strip=True))
+    else:
+        print("Nenhum título encontrado.")
